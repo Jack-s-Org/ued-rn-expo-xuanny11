@@ -10,6 +10,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import DiscoverScreen from "./screens/DiscoverScreen";
 import KPopScreen from "./screens/KpopScreen";
+import ChoreographyScreen from "./screens/ChoreographyScreen";
 
 const Icon = createIconSetFromIcoMoon(
   require("./assets/icomoon/selection.json"),

@@ -6,7 +6,6 @@ import {
   ImageBackground,
   ScrollView,
   Image,
-  TouchableOpacity,
 } from "react-native";
 import Icon from "react-native-vector-icons/Ionicons";
 import { useNavigation } from "@react-navigation/native";
@@ -15,18 +14,16 @@ const backgroundImage = require("@/images/background.jpg");
 
 const ChoreographyScreen = () => {
   return (
-    <SafeAreaView style={styles.container}>
-      <ImageBackground source={backgroundImage} style={styles.backgroundImage}>
-        <View style={styles.headerContainer}>
-          <Text style={styles.logoText}>STEEZY</Text>
-          <Icon
-            name="notifications-outline"
-            size={35}
-            style={styles.notificationIcon}
-          />
-        </View>
-      </ImageBackground>
-    </SafeAreaView>
+    <ImageBackground source={backgroundImage} style={styles.backgroundImage}>
+      <View style={styles.headerContainer}>
+        <Text style={styles.logoText}>STEEZY</Text>
+        <Icon
+          name="notifications-outline"
+          size={35}
+          style={styles.notificationIcon}
+        />
+      </View>
+    </ImageBackground>
   );
 };
 

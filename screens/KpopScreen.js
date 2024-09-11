@@ -6,10 +6,11 @@ import {
   ImageBackground,
   Image,
   ScrollView,
+  TouchableOpacity,
 } from "react-native";
 import { MaterialIcons } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
 
-const Separator = () => <View style={styles.separator} />;
 const backgroundImage = require("@/images/background.jpg");
 const categoriescardImage = require("@/images/categoriescard.png");
 
@@ -50,7 +51,15 @@ const cardData = [
   },
 ];
 
-const KPopScreen = () => {
+const KpopScreen = () => {
+  const navigation = useNavigation();
+
+  const handleCardPress = (category) => {
+    if (category === "1") {
+      navigation.navigate("ChoreographyScreen");
+    }
+  };
+
   return (
     <ImageBackground source={backgroundImage} style={styles.backgroundImage}>
       <View style={styles.headerContainer}>
@@ -86,7 +95,12 @@ const KPopScreen = () => {
         showsVerticalScrollIndicator={false}
       >
         {cardData.map((card) => (
-          <View key={card.id} style={styles.categoriesCardImageWrapper}>
+          <TouchableOpacity
+            key={card.id}
+            onPress={() => handleCardPress(card.id)}
+            activeOpacity={0.7}
+            style={styles.categoriesCardImageWrapper}
+          >
             <ImageBackground
               source={categoriescardImage}
               style={styles.categoriesCardImage}
@@ -97,7 +111,7 @@ const KPopScreen = () => {
                 style={styles.innerCardImage}
               />
             </ImageBackground>
-          </View>
+          </TouchableOpacity>
         ))}
       </ScrollView>
     </ImageBackground>
@@ -214,4 +228,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default KPopScreen;
+export default KpopScreen;

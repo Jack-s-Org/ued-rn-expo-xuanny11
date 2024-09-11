@@ -5,6 +5,7 @@ import {
   View,
   ImageBackground,
   ScrollView,
+  Image,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Icon from "react-native-vector-icons/Ionicons";
@@ -20,159 +21,158 @@ const danceworkoutBoxBackgroundImage = require("@/images/danceworkoutbox.png");
 
 const HomeScreen = () => {
   return (
-    <SafeAreaView style={styles.container}>
-      <ImageBackground source={backgroundImage} style={styles.backgroundImage}>
-        <View style={styles.headerContainer}>
-          <Text style={styles.logoText}>STEEZY</Text>
-          <Icon
-            name="notifications-outline"
-            size={35}
-            style={styles.notificationIcon}
-          />
-        </View>
+    <ImageBackground source={backgroundImage} style={styles.backgroundImage}>
+      <View style={styles.headerContainer}>
+        <Text style={styles.logoText}>STEEZY</Text>
+        <Icon
+          name="notifications-outline"
+          size={35}
+          style={styles.notificationIcon}
+        />
+      </View>
 
-        <ScrollView contentContainerStyle={styles.scrollContainer}>
-          <ImageBackground source={box1BackgroundImage} style={styles.box1}>
-            <View style={styles.innerBoxesContainer}>
-              <ImageBackground
-                source={innerBox1BackgroundImage}
-                style={styles.innerBox1}
-              >
-                <Text style={styles.eventTitle}>Events</Text>
-                <Text style={styles.eventDate}>August - December 2024</Text>
-                <ImageBackground
-                  source={{
-                    uri: "https://newsroom.korea.net/upload/content/editImage/20210709101435973_F7B00CQ6.png",
-                  }}
-                  style={styles.image1}
-                />
-              </ImageBackground>
-              <ImageBackground
-                source={innerBox2BackgroundImage}
-                style={styles.innerBox2}
-              >
-                <Text style={styles.eventTitle}>Today's</Text>
-                <Text style={styles.eventTitle}>Live Classes</Text>
-                <ImageBackground
-                  source={{
-                    uri: "https://i.ytimg.com/vi/NU611fxGyPU/maxresdefault.jpg",
-                  }}
-                  style={styles.image2}
-                >
-                  <View style={styles.imageTextContainer}>
-                    <Text style={styles.imageText1}>Black Mamba</Text>
-                    <Text style={styles.imageText2}>
-                      K-POP | INTERMEDIATE | CHOREOGRAPHY
-                    </Text>
-                  </View>
-                </ImageBackground>
-              </ImageBackground>
-            </View>
-
+      <ScrollView contentContainerStyle={styles.scrollContainer}>
+        <ImageBackground source={box1BackgroundImage} style={styles.box1}>
+          <View style={styles.innerBoxesContainer}>
             <ImageBackground
-              source={recommendationBoxBackgroundImage}
-              style={styles.recommendationBox}
-              imageStyle={{ borderRadius: 25 }}
+              source={innerBox1BackgroundImage}
+              style={styles.innerBox1}
             >
-              <Text style={styles.recommendationTitle}>Recommendations</Text>
-
-              <ImageBackground
-                source={songBoxBackgroundImage}
-                style={styles.songBox}
-                imageStyle={{ borderRadius: 10 }}
-              >
-                <View style={{ width: 270 }}>
-                  <Text style={styles.songTitle}>Girls Never Die</Text>
-                </View>
-                <Icon name="heart-outline" size={20} color="#000" />
-              </ImageBackground>
-
-              <ImageBackground
-                source={songBoxBackgroundImage}
-                style={styles.songBox}
-                imageStyle={{ borderRadius: 10 }}
-              >
-                <View style={{ width: 270 }}>
-                  <Text style={styles.songTitle}>Maestro</Text>
-                </View>
-                <Icon name="heart" size={20} color="red" />
-              </ImageBackground>
-
-              <ImageBackground
-                source={songBoxBackgroundImage}
-                style={styles.songBox}
-                imageStyle={{ borderRadius: 10 }}
-              >
-                <View style={{ width: 270 }}>
-                  <Text style={styles.songTitle}>You Were Beautiful</Text>
-                </View>
-                <Icon name="heart" size={20} color="red" />
-              </ImageBackground>
+              <Text style={styles.eventTitle}>Events</Text>
+              <Text style={styles.eventDate}>August - December 2024</Text>
+              <Image
+                source={{
+                  uri: "https://newsroom.korea.net/upload/content/editImage/20210709101435973_F7B00CQ6.png",
+                }}
+                style={styles.image1}
+              />
             </ImageBackground>
-
             <ImageBackground
-              source={exploreBoxBackgroundImage}
-              style={styles.exploreBox}
-              imageStyle={{ borderRadius: 25 }}
+              source={innerBox2BackgroundImage}
+              style={styles.innerBox2}
             >
-              <Text style={styles.recommendationTitle}>Explore More</Text>
+              <Text style={styles.eventTitle}>Today's</Text>
+              <Text style={styles.eventTitle}>Live Classes</Text>
               <ImageBackground
                 source={{
-                  uri: "https://web-cf-image.cjenm.com/public/share/metamng/boards/en/streetwomanfighter-01.jpg?v=1654568281",
+                  uri: "https://i.ytimg.com/vi/NU611fxGyPU/maxresdefault.jpg",
                 }}
-                style={styles.image3}
+                style={styles.image2}
+                imageStyle={{ borderRadius: 10 }}
               >
                 <View style={styles.imageTextContainer}>
-                  <Text style={styles.exploreTitle}>K-Pop</Text>
-                </View>
-              </ImageBackground>
-
-              <ImageBackground
-                source={{
-                  uri: "https://puchong.co/uploads/default/optimized/2X/c/c0227ee24014bcc9f162cedeca22aace95c0b7d4_2_1035x538.jpeg",
-                }}
-                style={styles.image3}
-              >
-                <View style={styles.imageTextContainer}>
-                  <Text style={styles.exploreTitle}>Hip Hop</Text>
+                  <Text style={styles.imageText1}>Black Mamba</Text>
+                  <Text style={styles.imageText2}>
+                    K-POP | INTERMEDIATE | CHOREOGRAPHY
+                  </Text>
                 </View>
               </ImageBackground>
             </ImageBackground>
+          </View>
+
+          <ImageBackground
+            source={recommendationBoxBackgroundImage}
+            style={styles.recommendationBox}
+            imageStyle={{ borderRadius: 25 }}
+          >
+            <Text style={styles.recommendationTitle}>Recommendations</Text>
 
             <ImageBackground
-              source={danceworkoutBoxBackgroundImage}
-              style={styles.danceworkoutBox}
-              imageStyle={{ borderRadius: 25 }}
+              source={songBoxBackgroundImage}
+              style={styles.songBox}
+              imageStyle={{ borderRadius: 10 }}
             >
-              <Text style={styles.recommendationTitle}>Dance Workouts</Text>
-              <ScrollView
-                horizontal
-                contentContainerStyle={styles.danceworkoutScroll}
-              >
-                <ImageBackground
-                  source={{
-                    uri: "https://ca-times.brightspotcdn.com/dims4/default/ba225b2/2147483647/strip/true/crop/1986x1324+31+0/resize/1440x960!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F45%2Fda%2Fb50246c9f3a8f3678e244f334590%2Fla-he-dance-workouts-pg-20151029-006",
-                  }}
-                  style={styles.danceworkoutImage}
-                />
-                <ImageBackground
-                  source={{
-                    uri: "https://www.communityfitness.com/wp-content/uploads/2019/03/DanceClub-1280x630.jpg",
-                  }}
-                  style={styles.danceworkoutImage}
-                />
-                <ImageBackground
-                  source={{
-                    uri: "https://cdn.vox-cdn.com/thumbor/Jy0xpoevzTT2GUtR-bbd2yFm2-0=/0x9:612x468/1200x800/filters:focal(0x9:612x468)/cdn.vox-cdn.com/uploads/chorus_image/image/45273674/brukwine_2C_201.0.jpeg",
-                  }}
-                  style={styles.danceworkoutImage}
-                />
-              </ScrollView>
+              <View style={{ width: 270 }}>
+                <Text style={styles.songTitle}>Girls Never Die</Text>
+              </View>
+              <Icon name="heart-outline" size={20} color="#000" />
+            </ImageBackground>
+
+            <ImageBackground
+              source={songBoxBackgroundImage}
+              style={styles.songBox}
+              imageStyle={{ borderRadius: 10 }}
+            >
+              <View style={{ width: 270 }}>
+                <Text style={styles.songTitle}>Maestro</Text>
+              </View>
+              <Icon name="heart" size={20} color="red" />
+            </ImageBackground>
+
+            <ImageBackground
+              source={songBoxBackgroundImage}
+              style={styles.songBox}
+              imageStyle={{ borderRadius: 10 }}
+            >
+              <View style={{ width: 270 }}>
+                <Text style={styles.songTitle}>You Were Beautiful</Text>
+              </View>
+              <Icon name="heart" size={20} color="red" />
             </ImageBackground>
           </ImageBackground>
-        </ScrollView>
-      </ImageBackground>
-    </SafeAreaView>
+
+          <ImageBackground
+            source={exploreBoxBackgroundImage}
+            style={styles.exploreBox}
+            imageStyle={{ borderRadius: 25 }}
+          >
+            <Text style={styles.recommendationTitle}>Explore More</Text>
+            <ImageBackground
+              source={{
+                uri: "https://web-cf-image.cjenm.com/public/share/metamng/boards/en/streetwomanfighter-01.jpg?v=1654568281",
+              }}
+              style={styles.image3}
+            >
+              <View style={styles.imageTextContainer}>
+                <Text style={styles.exploreTitle}>K-Pop</Text>
+              </View>
+            </ImageBackground>
+
+            <ImageBackground
+              source={{
+                uri: "https://puchong.co/uploads/default/optimized/2X/c/c0227ee24014bcc9f162cedeca22aace95c0b7d4_2_1035x538.jpeg",
+              }}
+              style={styles.image3}
+            >
+              <View style={styles.imageTextContainer}>
+                <Text style={styles.exploreTitle}>Hip Hop</Text>
+              </View>
+            </ImageBackground>
+          </ImageBackground>
+
+          <ImageBackground
+            source={danceworkoutBoxBackgroundImage}
+            style={styles.danceworkoutBox}
+            imageStyle={{ borderRadius: 25 }}
+          >
+            <Text style={styles.recommendationTitle}>Dance Workouts</Text>
+            <ScrollView
+              horizontal
+              contentContainerStyle={styles.danceworkoutScroll}
+            >
+              <ImageBackground
+                source={{
+                  uri: "https://ca-times.brightspotcdn.com/dims4/default/ba225b2/2147483647/strip/true/crop/1986x1324+31+0/resize/1440x960!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F45%2Fda%2Fb50246c9f3a8f3678e244f334590%2Fla-he-dance-workouts-pg-20151029-006",
+                }}
+                style={styles.danceworkoutImage}
+              />
+              <ImageBackground
+                source={{
+                  uri: "https://www.communityfitness.com/wp-content/uploads/2019/03/DanceClub-1280x630.jpg",
+                }}
+                style={styles.danceworkoutImage}
+              />
+              <ImageBackground
+                source={{
+                  uri: "https://cdn.vox-cdn.com/thumbor/Jy0xpoevzTT2GUtR-bbd2yFm2-0=/0x9:612x468/1200x800/filters:focal(0x9:612x468)/cdn.vox-cdn.com/uploads/chorus_image/image/45273674/brukwine_2C_201.0.jpeg",
+                }}
+                style={styles.danceworkoutImage}
+              />
+            </ScrollView>
+          </ImageBackground>
+        </ImageBackground>
+      </ScrollView>
+    </ImageBackground>
   );
 };
 
@@ -191,7 +191,7 @@ const styles = StyleSheet.create({
 
   scrollContainer: {
     alignItems: "center",
-    paddingBottom: 20,
+    paddingBottom: 80,
   },
 
   headerContainer: {
@@ -200,7 +200,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
     paddingHorizontal: 20,
-    paddingVertical: 10,
+    paddingVertical: 50,
   },
 
   logoText: {
