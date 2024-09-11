@@ -1,101 +1,126 @@
 import { useState } from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Ionicons from "@expo/vector-icons/Ionicons";
+import FontAwesome from "@expo/vector-icons/FontAwesome";
 import HomeScreen from "./HomeScreen";
 import NotificationsScreen from "./NotificationsScreen";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { SafeAreaView } from "react-native-safe-area-context";
 import MeScreen from "./MeScreen";
 import DiscoverScreen from "./DiscoverScreen";
 import AppDrawer from "./AppDrawer";
 import SettingsScreen from "./SettingsScreen";
 import AddScreen from "./AddScreen";
-
+import { View } from "react-native";
+import AntDesign from "@expo/vector-icons/AntDesign";
+import Feather from "@expo/vector-icons/Feather";
+import FontAwesome5 from "@expo/vector-icons/FontAwesome5";
 const MainStacks = createNativeStackNavigator();
+
 const Tab = createBottomTabNavigator();
 
 const Empty = () => null;
 
 const MainTabs = ({ navigation }) => {
-  const [unreadCount, setUnreadCount] = useState(3);
+  const [unreadCount, setUnreadCount] = useState(4);
   return (
-    <AppDrawer navigation={navigation}>
-      <SafeAreaView style={{ height: "100%" }}>
-        <Tab.Navigator
-          screenOptions={{
-            headerShown: false,
-            tabBarActiveTintColor: "#408086",
-          }}
-        >
-          <Tab.Screen
-            name="Home"
-            component={HomeScreen}
-            options={{
-              tabBarIcon: ({ color, size }) => (
-                <Ionicons name="home" size={size} color={color} />
-              ),
-              tabBarLabel: "Home",
-            }}
-          />
+    <Tab.Navigator
+      screenOptions={{
+        headerShown: false,
+        tabBarActiveTintColor: "#408086",
+        tabBarStyle: {
+          borderRadius: 90,
+          position: "absolute",
+          bottom: -10,
+          justifyContent: "center",
+          alignItems: "center",
+          marginTop: 12,
+          backgroundColor: "#1B1B1B",
+          width: 350,
+          alignSelf: "center",
+          marginLeft: 30,
+          elevation: 0,
+          borderTopWidth: 0,
+        },
+        tabBarShowLabel: false,
+      }}
+    >
+      <Tab.Screen
+        name="Home"
+        component={HomeScreen}
+        options={{
+          tabBarIcon: ({ color, size }) => (
+            <View
+              style={{
+                marginTop: 40,
+                width: 40,
+                height: 40,
+                marginLeft: 20,
+              }}
+            >
+              <FontAwesome name="home" size={size} color={color} />
+            </View>
+          ),
+        }}
+      />
 
-          <Tab.Screen
-            name="Discover"
-            component={DiscoverScreen}
-            options={{
-              tabBarIcon: ({ color, size }) => (
-                <Ionicons name="search" size={size} color={color} />
-              ),
-              tabBarLabel: "Discover",
-            }}
-          />
+      <Tab.Screen
+        name="library"
+        component={DiscoverScreen}
+        options={{
+          tabBarIcon: ({ color, size }) => (
+            <View
+              style={{
+                marginTop: 40,
+                width: 40,
+                height: 40,
+                marginLeft: 20,
+              }}
+            >
+              <FontAwesome5 name="folder-open" size={24} color={color} />
+            </View>
+          ),
+        }}
+      />
 
-          <Tab.Screen
-            name="AddTab"
-            component={Empty} // this is a workaround to show a full screen when this tab is pressed
-            options={{
-              tabBarIcon: ({ color }) => (
-                <Ionicons name="add" size={36} color={color} />
-              ),
-              tabBarLabel: () => null,
-            }}
-            listeners={{
-              tabPress: (e) => {
-                e.preventDefault(); // stop default navigation
-                navigation.navigate("Add"); // manually navigate to the stack screen outside of the tab navigators
-              },
-            }}
-          />
+      <Tab.Screen
+        name="video"
+        component={NotificationsScreen}
+        options={{
+          tabBarIcon: ({ color, size }) => (
+            <View
+              style={{
+                marginTop: 40,
+                width: 40,
+                height: 40,
+                marginLeft: 20,
+              }}
+            >
+              <Feather name="video" size={24} color={color} />
+            </View>
+          ),
+        }}
+      />
 
-          <Tab.Screen
-            name="Inbox"
-            component={NotificationsScreen}
-            options={{
-              tabBarIcon: ({ color, size }) => (
-                <Ionicons name="chatbox" size={size} color={color} />
-              ),
-              tabBarLabel: "Inbox",
-              tabBarBadge: unreadCount,
-            }}
-            listeners={{
-              tabPress: () => {
-                setUnreadCount(null);
-              },
-            }}
-          />
-
-          <Tab.Screen
-            name="SettingsDrawer"
-            component={MeScreen}
-            options={{
-              tabBarIcon: ({ color, size }) => (
-                <Ionicons name="person" size={size} color={color} />
-              ),
-              tabBarLabel: "Me",
-            }}
-          />
-        </Tab.Navigator>
-      </SafeAreaView>
-    </AppDrawer>
+      <Tab.Screen
+        name="SettingsDrawer"
+        component={MeScreen}
+        options={{
+          tabBarIcon: ({ color, size }) => (
+            <View
+              style={{
+                marginTop: 40,
+                width: 40,
+                height: 40,
+                marginRight: 20,
+              }}
+            >
+              <AntDesign name="user" size={24} color={color} />
+            </View>
+          ),
+          tabBarLabel: "Me",
+        }}
+      />
+    </Tab.Navigator>
   );
 };
 
