@@ -151,6 +151,7 @@ const styles = StyleSheet.create({
   categoriesScrollContainer: {
     flexDirection: "column",
     paddingTop: 20,
+    paddingBottom: 370,
   },
 
   headerContainer: {
@@ -159,8 +160,8 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
     paddingHorizontal: 20,
-    paddingTop: 20,
-    paddingBottom: -20,
+    paddingTop: 50,
+    // paddingBottom: -20,
   },
 
   logoText: {

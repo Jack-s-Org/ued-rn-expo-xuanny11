@@ -30,17 +30,15 @@ export default function App() {
   }
 
   return (
-    <SafeAreaProvider>
-      <SafeAreaView style={{ height: "100%" }}>
-        {<RootNavigator />}
-        {/* <Icon name="home" size={50} color="red" />
+    <SafeAreaView style={{ height: "100%" }}>
+      {<RootNavigator />}
+      {/* <Icon name="home" size={50} color="red" />
       <Image
         source={require("@/assets/add.png")}
         style={{ height: 124, width: 64 }}
       />
       <Text style={{ fontFamily: "Gilker-Regular" }}>Hello</Text> */}
-        {/* <VideoPlayer /> */}
-      </SafeAreaView>
-    </SafeAreaProvider>
+      {/* <VideoPlayer /> */}
+    </SafeAreaView>
   );
 }

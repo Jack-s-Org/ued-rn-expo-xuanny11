@@ -13,7 +13,7 @@ import { useNavigation } from "@react-navigation/native";
 
 const backgroundImage = require("@/images/background.jpg");
 
-const HomeScreen = () => {
+const ChoreographyScreen = () => {
   return (
     <SafeAreaView style={styles.container}>
       <ImageBackground source={backgroundImage} style={styles.backgroundImage}>

@@ -31,7 +31,7 @@ const MainTabs = ({ navigation }) => {
         tabBarStyle: {
           borderRadius: 90,
           position: "absolute",
-          bottom: -10,
+          bottom: 25,
           justifyContent: "center",
           alignItems: "center",
           marginTop: 12,

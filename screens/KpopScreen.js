@@ -9,6 +9,7 @@ import {
 } from "react-native";
 import { MaterialIcons } from "@expo/vector-icons";
 
+const Separator = () => <View style={styles.separator} />;
 const backgroundImage = require("@/images/background.jpg");
 const categoriescardImage = require("@/images/categoriescard.png");
 
@@ -116,6 +117,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     paddingHorizontal: 20,
     paddingVertical: 20,
+    paddingTop: 5,
   },
 
   logoText: {
@@ -177,6 +179,7 @@ const styles = StyleSheet.create({
     flexGrow: 1,
     padding: 20,
     alignItems: "center",
+    paddingBottom: 100,
   },
 
   categoriesCardImageWrapper: {
