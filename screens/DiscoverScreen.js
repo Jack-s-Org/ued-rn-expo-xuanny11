@@ -62,7 +62,7 @@ const DiscoverScreen = () => {
 
   const handleCardPress = (category) => {
     if (category === "K-Pop") {
-      navigation.navigate("KPop");
+      navigation.navigate("KpopScreen");
     }
   };
 
@@ -96,12 +96,15 @@ const DiscoverScreen = () => {
           </ImageBackground>
         </ScrollView>
 
-        <ScrollView contentContainerStyle={styles.categoriesScrollContainer}>
+        <ScrollView
+          style={{ height: "100%" }}
+          contentContainerStyle={styles.categoriesScrollContainer}
+        >
           {categoryCardsData.map((card, index) => (
             <TouchableOpacity
               key={index}
               style={styles.categoriesCardContainer}
-              onPress={() => handleCardPress(card.text)} // Make card clickable
+              onPress={() => handleCardPress(card.text)}
             >
               <ImageBackground
                 source={categoriescardImage}
@@ -156,7 +159,8 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
     paddingHorizontal: 20,
-    paddingVertical: 20,
+    paddingTop: 20,
+    paddingBottom: -20,
   },
 
   logoText: {

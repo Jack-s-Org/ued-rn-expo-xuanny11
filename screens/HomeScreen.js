@@ -37,7 +37,6 @@ const HomeScreen = () => {
               <ImageBackground
                 source={innerBox1BackgroundImage}
                 style={styles.innerBox1}
-                imageStyle={{ borderRadius: 25 }}
               >
                 <Text style={styles.eventTitle}>Events</Text>
                 <Text style={styles.eventDate}>August - December 2024</Text>
@@ -51,7 +50,6 @@ const HomeScreen = () => {
               <ImageBackground
                 source={innerBox2BackgroundImage}
                 style={styles.innerBox2}
-                imageStyle={{ borderRadius: 25 }}
               >
                 <Text style={styles.eventTitle}>Today's</Text>
                 <Text style={styles.eventTitle}>Live Classes</Text>

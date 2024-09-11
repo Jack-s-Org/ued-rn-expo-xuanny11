@@ -14,6 +14,7 @@ import { View } from "react-native";
 import AntDesign from "@expo/vector-icons/AntDesign";
 import Feather from "@expo/vector-icons/Feather";
 import FontAwesome5 from "@expo/vector-icons/FontAwesome5";
+import KpopScreen from "./KpopScreen";
 const MainStacks = createNativeStackNavigator();
 
 const Tab = createBottomTabNavigator();
@@ -140,6 +141,12 @@ const MainScreens = () => {
       <MainStacks.Screen
         name="Settings"
         component={SettingsScreen}
+        options={{ animation: "fade_from_bottom" }}
+      />
+
+      <MainStacks.Screen
+        name="KpopScreen"
+        component={KpopScreen}
         options={{ animation: "fade_from_bottom" }}
       />
     </MainStacks.Navigator>
