@@ -8,11 +8,12 @@ import {
   ScrollView,
   TouchableOpacity,
 } from "react-native";
-import { MaterialIcons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
+import { MaterialIcons } from "@expo/vector-icons";
 
 const backgroundImage = require("@/images/background.jpg");
 const categoriescardImage = require("@/images/categoriescard.png");
+const backButtonImage = require("@/images/backbutton.png");
 
 const cardData = [
   {
@@ -60,32 +61,53 @@ const KpopScreen = () => {
     }
   };
 
+  const handleBackPress = () => {
+    navigation.goBack();
+  };
+
   return (
     <ImageBackground source={backgroundImage} style={styles.backgroundImage}>
       <View style={styles.headerContainer}>
-        <Text style={styles.logoText}>K-Pop</Text>
-
-        <View style={styles.imageTextContainer}>
-          <View style={styles.imageWrapper}>
-            <Image
-              source={require("@/images/programbox.png")}
-              style={styles.iconImage}
-            />
-            <Text style={styles.iconText}>Boy Group</Text>
-          </View>
-
-          <View style={styles.imageWrapper}>
-            <Image
-              source={require("@/images/selectgroup.png")}
-              style={styles.iconImage2}
-            />
-            <Text style={styles.iconText2}>Girl Group</Text>
+        <TouchableOpacity
+          onPress={handleBackPress}
+          style={styles.backButtonWrapper}
+        >
+          <View style={styles.backButtonWrapper}>
+            <Image source={backButtonImage} style={styles.backButtonImage} />
             <MaterialIcons
-              name="close"
-              size={20}
+              name="arrow-back"
+              size={24}
               color="white"
-              style={styles.closeIcon}
+              style={styles.backButtonIcon}
             />
+          </View>
+        </TouchableOpacity>
+
+        <View style={styles.logoAndIconsContainer}>
+          <Text style={styles.logoText}>K-Pop</Text>
+
+          <View style={styles.imageTextContainer}>
+            <View style={styles.imageWrapper}>
+              <Image
+                source={require("@/images/programbox.png")}
+                style={styles.iconImage}
+              />
+              <Text style={styles.iconText}>Boy Group</Text>
+            </View>
+
+            <View style={styles.imageWrapper}>
+              <Image
+                source={require("@/images/selectgroup.png")}
+                style={styles.iconImage2}
+              />
+              <Text style={styles.iconText2}>Girl Group</Text>
+              <MaterialIcons
+                name="close"
+                size={20}
+                color="white"
+                style={styles.closeIcon}
+              />
+            </View>
           </View>
         </View>
       </View>
@@ -127,17 +149,40 @@ const styles = StyleSheet.create({
 
   headerContainer: {
     width: "100%",
-    flexDirection: "row",
-    alignItems: "center",
     paddingHorizontal: 20,
     paddingVertical: 20,
-    paddingTop: 5,
+    paddingTop: 60,
+  },
+
+  backButtonWrapper: {
+    alignSelf: "flex-start",
+    marginBottom: 10,
+  },
+
+  backButtonImage: {
+    width: 80,
+    height: 80,
+    left: -15,
+  },
+
+  backButtonIcon: {
+    position: "absolute",
+    top: 24,
+    left: 13,
+    color: "#000097",
+  },
+
+  logoAndIconsContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+    height: 35,
   },
 
   logoText: {
     fontSize: 24,
     fontWeight: "bold",
     color: "#000097",
+    textAlign: "center",
   },
 
   imageTextContainer: {

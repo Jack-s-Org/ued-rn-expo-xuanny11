@@ -128,7 +128,7 @@ const MainTabs = ({ navigation }) => {
 
 const MainScreens = () => {
   return (
-    <MainStacks.Navigator>
+    <MainStacks.Navigator screenOptions={{ headerShown: false }}>
       <MainStacks.Screen
         name="MainTabs"
         component={MainTabs}

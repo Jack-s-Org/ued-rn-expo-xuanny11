@@ -122,6 +122,7 @@ const HomeScreen = () => {
                 uri: "https://web-cf-image.cjenm.com/public/share/metamng/boards/en/streetwomanfighter-01.jpg?v=1654568281",
               }}
               style={styles.image3}
+              imageStyle={{ borderRadius: 15 }}
             >
               <View style={styles.imageTextContainer}>
                 <Text style={styles.exploreTitle}>K-Pop</Text>
@@ -133,6 +134,7 @@ const HomeScreen = () => {
                 uri: "https://puchong.co/uploads/default/optimized/2X/c/c0227ee24014bcc9f162cedeca22aace95c0b7d4_2_1035x538.jpeg",
               }}
               style={styles.image3}
+              imageStyle={{ borderRadius: 15 }}
             >
               <View style={styles.imageTextContainer}>
                 <Text style={styles.exploreTitle}>Hip Hop</Text>
@@ -155,18 +157,21 @@ const HomeScreen = () => {
                   uri: "https://ca-times.brightspotcdn.com/dims4/default/ba225b2/2147483647/strip/true/crop/1986x1324+31+0/resize/1440x960!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F45%2Fda%2Fb50246c9f3a8f3678e244f334590%2Fla-he-dance-workouts-pg-20151029-006",
                 }}
                 style={styles.danceworkoutImage}
+                imageStyle={{ borderRadius: 15 }}
               />
               <ImageBackground
                 source={{
                   uri: "https://www.communityfitness.com/wp-content/uploads/2019/03/DanceClub-1280x630.jpg",
                 }}
                 style={styles.danceworkoutImage}
+                imageStyle={{ borderRadius: 15 }}
               />
               <ImageBackground
                 source={{
                   uri: "https://cdn.vox-cdn.com/thumbor/Jy0xpoevzTT2GUtR-bbd2yFm2-0=/0x9:612x468/1200x800/filters:focal(0x9:612x468)/cdn.vox-cdn.com/uploads/chorus_image/image/45273674/brukwine_2C_201.0.jpeg",
                 }}
                 style={styles.danceworkoutImage}
+                imageStyle={{ borderRadius: 15 }}
               />
             </ScrollView>
           </ImageBackground>
@@ -379,7 +384,7 @@ const styles = StyleSheet.create({
   danceworkoutBox: {
     display: "flex",
     width: 380,
-    height: 170,
+    height: 200,
     padding: 25,
     flexDirection: "column",
     alignItems: "flex-start",
