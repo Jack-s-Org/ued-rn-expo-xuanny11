@@ -60,13 +60,17 @@ const ChoreographyScreen = () => {
         </View>
       </View>
 
+      {/* Horizontal ScrollView for carousel */}
       <ScrollView
-        contentContainerStyle={styles.scrollViewContainer}
-        showsVerticalScrollIndicator={false}
+        horizontal={true}
+        pagingEnabled={true}
+        contentContainerStyle={styles.horizontalScrollContainer}
+        showsHorizontalScrollIndicator={false}
       >
+        {/* First Image - Drama */}
         <View style={styles.dramaContainer}>
           <Image source={dramaImage} style={styles.belowSearchBarImage} />
-          <Text style={styles.dramaText}>Drama</Text>
+          <Text style={styles.titleText1}>Drama</Text>
 
           <View style={styles.iconContainer}>
             <Image source={loveIconImage} style={styles.iconImage} />
@@ -84,6 +88,141 @@ const ChoreographyScreen = () => {
             </View>
             <Text style={styles.infoText}>Length</Text>
             <Text style={styles.timeText}>3 mins 34 secs</Text>
+
+            <View style={styles.buttonContainer}>
+              <TouchableOpacity>
+                <ImageBackground
+                  source={programBoxImage}
+                  style={styles.buttonImage}
+                >
+                  <Text style={styles.buttonText}>Create Class</Text>
+                </ImageBackground>
+              </TouchableOpacity>
+
+              <TouchableOpacity>
+                <ImageBackground
+                  source={programBoxImage}
+                  style={styles.buttonImage}
+                >
+                  <Text style={styles.buttonText}>Join Class</Text>
+                </ImageBackground>
+              </TouchableOpacity>
+            </View>
+          </View>
+        </View>
+
+        {/* Second Image - Black Mamba */}
+        <View style={styles.dramaContainer}>
+          <Image source={blackmambaImage} style={styles.belowSearchBarImage} />
+          <Text style={styles.titleText2}>Black Mamba</Text>
+
+          <View style={styles.iconContainer}>
+            <Image source={loveIconImage} style={styles.iconImage} />
+            <Image source={shareIconImage} style={styles.iconImage} />
+          </View>
+
+          <View style={styles.infoContainer}>
+            <Text style={styles.infoText}>Difficulty Level</Text>
+            <View style={styles.starContainer}>
+              <FontAwesome name="star" size={18} color="#D1ADFF" />
+              <FontAwesome name="star" size={18} color="#D1ADFF" />
+              <FontAwesome name="star" size={18} color="#D1ADFF" />
+              <FontAwesome name="star" size={18} color="#D1ADFF" />
+              <FontAwesome name="star-o" size={18} color="#D1ADFF" />
+            </View>
+            <Text style={styles.infoText}>Length</Text>
+            <Text style={styles.timeText}>2 mins 54 secs</Text>
+
+            <View style={styles.buttonContainer}>
+              <TouchableOpacity>
+                <ImageBackground
+                  source={programBoxImage}
+                  style={styles.buttonImage}
+                >
+                  <Text style={styles.buttonText}>Create Class</Text>
+                </ImageBackground>
+              </TouchableOpacity>
+
+              <TouchableOpacity>
+                <ImageBackground
+                  source={programBoxImage}
+                  style={styles.buttonImage}
+                >
+                  <Text style={styles.buttonText}>Join Class</Text>
+                </ImageBackground>
+              </TouchableOpacity>
+            </View>
+          </View>
+        </View>
+
+        {/* Third Image - Dreams Come True */}
+        <View style={styles.dramaContainer}>
+          <Image
+            source={dreamscometrueImage}
+            style={styles.belowSearchBarImage}
+          />
+          <Text style={styles.titleText2}>Dreams Come True</Text>
+
+          <View style={styles.iconContainer}>
+            <Image source={loveIconImage} style={styles.iconImage} />
+            <Image source={shareIconImage} style={styles.iconImage} />
+          </View>
+
+          <View style={styles.infoContainer}>
+            <Text style={styles.infoText}>Difficulty Level</Text>
+            <View style={styles.starContainer}>
+              <FontAwesome name="star" size={18} color="#D1ADFF" />
+              <FontAwesome name="star" size={18} color="#D1ADFF" />
+              <FontAwesome name="star" size={18} color="#D1ADFF" />
+              <FontAwesome name="star-half-full" size={18} color="#D1ADFF" />
+              <FontAwesome name="star-o" size={18} color="#D1ADFF" />
+            </View>
+            <Text style={styles.infoText}>Length</Text>
+            <Text style={styles.timeText}>3 mins 24 secs</Text>
+
+            <View style={styles.buttonContainer}>
+              <TouchableOpacity>
+                <ImageBackground
+                  source={programBoxImage}
+                  style={styles.buttonImage}
+                >
+                  <Text style={styles.buttonText}>Create Class</Text>
+                </ImageBackground>
+              </TouchableOpacity>
+
+              <TouchableOpacity>
+                <ImageBackground
+                  source={programBoxImage}
+                  style={styles.buttonImage}
+                >
+                  <Text style={styles.buttonText}>Join Class</Text>
+                </ImageBackground>
+              </TouchableOpacity>
+            </View>
+          </View>
+        </View>
+
+        {/* Fourth Image - Armageddon */}
+        <View style={styles.dramaContainer}>
+          <Image source={armageddonImage} style={styles.belowSearchBarImage} />
+          <Text style={styles.titleText1}>Armageddon</Text>
+
+          <View style={styles.iconContainer}>
+            <Image source={loveIconImage} style={styles.iconImage} />
+            <Image source={shareIconImage} style={styles.iconImage} />
+          </View>
+
+          <View style={styles.infoContainer}>
+            <Text style={styles.infoText}>Difficulty Level</Text>
+            <View style={styles.starContainer}>
+              <FontAwesome name="star" size={18} color="#D1ADFF" />
+              <FontAwesome name="star" size={18} color="#D1ADFF" />
+              <FontAwesome name="star" size={18} color="#D1ADFF" />
+              <FontAwesome name="star" size={18} color="#D1ADFF" />
+              <FontAwesome name="star-half-full" size={18} color="#D1ADFF" />
+            </View>
+            <Text style={styles.infoText}>Length</Text>
+            <Text style={styles.timeText}>3 mins 16 secs</Text>
 
             <View style={styles.buttonContainer}>
               <TouchableOpacity>
@@ -188,11 +327,20 @@ const styles = StyleSheet.create({
     resizeMode: "contain",
   },
 
-  dramaText: {
+  titleText1: {
     position: "absolute",
     top: 35,
     left: 10,
     color: "#000097",
+    fontSize: 18,
+    fontWeight: "bold",
+  },
+
+  titleText2: {
+    position: "absolute",
+    top: 35,
+    left: 10,
+    color: "white",
     fontSize: 18,
     fontWeight: "bold",
   },
@@ -257,6 +405,23 @@ const styles = StyleSheet.create({
     color: "white",
     fontSize: 12,
     fontWeight: "bold",
+  },
+
+  horizontalScrollContainer: {
+    alignSelf: "center",
+    height: 400,
+    top: -130,
+    left: 50,
+    gap: 120,
+    alignItems: "flex-start",
+    paddingRight: 110,
+  },
+
+  belowSearchBarImage: {
+    width: 400,
+    height: 540,
+    paddingTop: 50,
+    resizeMode: "contain",
   },
 });
 
