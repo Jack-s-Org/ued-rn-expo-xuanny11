@@ -10,6 +10,7 @@ import {
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { MaterialIcons } from "@expo/vector-icons";
+import { FontAwesome } from "@expo/vector-icons"; // For star icons
 
 const backgroundImage = require("@/images/background.jpg");
 const backButtonImage = require("@/images/backbutton.png");
@@ -17,6 +18,10 @@ const searchBarImage = require("@/images/Searchbar.png");
 const dramaImage = require("@/images/drama.png");
 const loveIconImage = require("@/images/loveicon.png");
 const shareIconImage = require("@/images/shareicon.png");
+const programBoxImage = require("@/images/programbox.png");
+const blackmambaImage = require("@/images/blackmamba.png");
+const dreamscometrueImage = require("@/images/dreamscometrue.png");
+const armageddonImage = require("@/images/armageddon.png");
 
 const ChoreographyScreen = () => {
   const navigation = useNavigation();
@@ -63,10 +68,42 @@ const ChoreographyScreen = () => {
           <Image source={dramaImage} style={styles.belowSearchBarImage} />
           <Text style={styles.dramaText}>Drama</Text>
 
-          {/* Love and Share icons container */}
           <View style={styles.iconContainer}>
             <Image source={loveIconImage} style={styles.iconImage} />
             <Image source={shareIconImage} style={styles.iconImage} />
+          </View>
+
+          <View style={styles.infoContainer}>
+            <Text style={styles.infoText}>Difficulty Level</Text>
+            <View style={styles.starContainer}>
+              <FontAwesome name="star" size={18} color="#D1ADFF" />
+              <FontAwesome name="star" size={18} color="#D1ADFF" />
+              <FontAwesome name="star" size={18} color="#D1ADFF" />
+              <FontAwesome name="star-half-full" size={18} color="#D1ADFF" />
+              <FontAwesome name="star-o" size={18} color="#D1ADFF" />
+            </View>
+            <Text style={styles.infoText}>Length</Text>
+            <Text style={styles.timeText}>3 mins 34 secs</Text>
+
+            <View style={styles.buttonContainer}>
+              <TouchableOpacity>
+                <ImageBackground
+                  source={programBoxImage}
+                  style={styles.buttonImage}
+                >
+                  <Text style={styles.buttonText}>Create Class</Text>
+                </ImageBackground>
+              </TouchableOpacity>
+
+              <TouchableOpacity>
+                <ImageBackground
+                  source={programBoxImage}
+                  style={styles.buttonImage}
+                >
+                  <Text style={styles.buttonText}>Join Class</Text>
+                </ImageBackground>
+              </TouchableOpacity>
+            </View>
           </View>
         </View>
       </ScrollView>
@@ -83,6 +120,7 @@ const styles = StyleSheet.create({
 
   headerContainer: {
     width: "100%",
+    height: 200,
     paddingHorizontal: 20,
     paddingVertical: 20,
     paddingTop: 60,
@@ -106,33 +144,26 @@ const styles = StyleSheet.create({
     color: "#000097",
   },
 
-  searchBarContainer: {
-    flexDirection: "row",
-    alignItems: "center",
-    marginTop: 16,
-    paddingBottom: 10,
-  },
-
   searchBarImage: {
-    width: "110%",
-    height: 120,
-    resizeMode: "contain",
+    width: 400,
+    height: 60,
     position: "relative",
-    left: -12,
-    top: -70,
+    alignSelf: "center",
+    left: 0,
+    top: -30,
   },
 
   searchIcon: {
     position: "absolute",
     left: 25,
-    top: -25,
+    top: -15,
     color: "#000097",
   },
 
   searchText: {
     position: "absolute",
     left: 60,
-    top: -23,
+    top: -15,
     color: "#000097",
     fontSize: 16,
   },
@@ -147,7 +178,7 @@ const styles = StyleSheet.create({
     width: 300,
     height: 200,
     position: "relative",
-    marginTop: -10,
+    marginTop: -20,
     alignItems: "center",
   },
 
@@ -168,8 +199,8 @@ const styles = StyleSheet.create({
 
   iconContainer: {
     position: "absolute",
-    top: 20,
-    right: -5,
+    top: 40,
+    right: -10,
     flexDirection: "column",
     justifyContent: "flex-start",
   },
@@ -177,7 +208,55 @@ const styles = StyleSheet.create({
   iconImage: {
     width: 80,
     height: 80,
+    marginTop: -20,
+  },
+
+  infoContainer: {
+    position: "absolute",
+    top: 405,
+    left: 10,
+    flexDirection: "column",
+    alignItems: "flex-start",
+  },
+
+  infoText: {
+    color: "white",
+    fontSize: 14,
+    fontWeight: "bold",
+    marginBottom: 5,
+  },
+
+  starContainer: {
+    flexDirection: "row",
     marginBottom: 10,
+  },
+
+  timeText: {
+    color: "white",
+    fontSize: 14,
+    marginTop: 5,
+  },
+
+  buttonContainer: {
+    position: "absolute",
+    bottom: 0,
+    left: 158,
+    flexDirection: "column",
+    gap: 8,
+  },
+
+  buttonImage: {
+    width: 120,
+    height: 40,
+    justifyContent: "center",
+    alignItems: "center",
+    marginLeft: 10,
+  },
+
+  buttonText: {
+    color: "white",
+    fontSize: 12,
+    fontWeight: "bold",
   },
 });
 
