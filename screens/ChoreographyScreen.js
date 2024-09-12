@@ -14,6 +14,9 @@ import { MaterialIcons } from "@expo/vector-icons";
 const backgroundImage = require("@/images/background.jpg");
 const backButtonImage = require("@/images/backbutton.png");
 const searchBarImage = require("@/images/Searchbar.png");
+const dramaImage = require("@/images/drama.png");
+const loveIconImage = require("@/images/loveicon.png");
+const shareIconImage = require("@/images/shareicon.png");
 
 const ChoreographyScreen = () => {
   const navigation = useNavigation();
@@ -55,7 +58,18 @@ const ChoreographyScreen = () => {
       <ScrollView
         contentContainerStyle={styles.scrollViewContainer}
         showsVerticalScrollIndicator={false}
-      ></ScrollView>
+      >
+        <View style={styles.dramaContainer}>
+          <Image source={dramaImage} style={styles.belowSearchBarImage} />
+          <Text style={styles.dramaText}>Drama</Text>
+
+          {/* Love and Share icons container */}
+          <View style={styles.iconContainer}>
+            <Image source={loveIconImage} style={styles.iconImage} />
+            <Image source={shareIconImage} style={styles.iconImage} />
+          </View>
+        </View>
+      </ScrollView>
     </ImageBackground>
   );
 };
@@ -95,7 +109,8 @@ const styles = StyleSheet.create({
   searchBarContainer: {
     flexDirection: "row",
     alignItems: "center",
-    marginTop: 20,
+    marginTop: 16,
+    paddingBottom: 10,
   },
 
   searchBarImage: {
@@ -126,6 +141,43 @@ const styles = StyleSheet.create({
     flexGrow: 1,
     padding: 20,
     alignItems: "center",
+  },
+
+  dramaContainer: {
+    width: 300,
+    height: 200,
+    position: "relative",
+    marginTop: -10,
+    alignItems: "center",
+  },
+
+  dramaImage: {
+    width: "100%",
+    height: "100%",
+    resizeMode: "contain",
+  },
+
+  dramaText: {
+    position: "absolute",
+    top: 35,
+    left: 10,
+    color: "#000097",
+    fontSize: 18,
+    fontWeight: "bold",
+  },
+
+  iconContainer: {
+    position: "absolute",
+    top: 20,
+    right: -5,
+    flexDirection: "column",
+    justifyContent: "flex-start",
+  },
+
+  iconImage: {
+    width: 80,
+    height: 80,
+    marginBottom: 10,
   },
 });
 
