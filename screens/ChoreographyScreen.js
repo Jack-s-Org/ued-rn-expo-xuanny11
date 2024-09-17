@@ -10,7 +10,7 @@ import {
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { MaterialIcons } from "@expo/vector-icons";
-import { FontAwesome } from "@expo/vector-icons"; // For star icons
+import { FontAwesome } from "@expo/vector-icons";
 
 const backgroundImage = require("@/images/background.jpg");
 const backButtonImage = require("@/images/backbutton.png");
@@ -60,14 +60,12 @@ const ChoreographyScreen = () => {
         </View>
       </View>
 
-      {/* Horizontal ScrollView for carousel */}
       <ScrollView
         horizontal={true}
         pagingEnabled={true}
         contentContainerStyle={styles.horizontalScrollContainer}
         showsHorizontalScrollIndicator={false}
       >
-        {/* First Image - Drama */}
         <View style={styles.dramaContainer}>
           <Image source={dramaImage} style={styles.belowSearchBarImage} />
           <Text style={styles.titleText1}>Drama</Text>
@@ -111,7 +109,6 @@ const ChoreographyScreen = () => {
           </View>
         </View>
 
-        {/* Second Image - Black Mamba */}
         <View style={styles.dramaContainer}>
           <Image source={blackmambaImage} style={styles.belowSearchBarImage} />
           <Text style={styles.titleText2}>Black Mamba</Text>
@@ -155,7 +152,6 @@ const ChoreographyScreen = () => {
           </View>
         </View>
 
-        {/* Third Image - Dreams Come True */}
         <View style={styles.dramaContainer}>
           <Image
             source={dreamscometrueImage}
@@ -202,7 +198,6 @@ const ChoreographyScreen = () => {
           </View>
         </View>
 
-        {/* Fourth Image - Armageddon */}
         <View style={styles.dramaContainer}>
           <Image source={armageddonImage} style={styles.belowSearchBarImage} />
           <Text style={styles.titleText1}>Armageddon</Text>
@@ -296,14 +291,14 @@ const styles = StyleSheet.create({
     position: "absolute",
     left: 25,
     top: -15,
-    color: "#000097",
+    color: "white",
   },
 
   searchText: {
     position: "absolute",
     left: 60,
     top: -15,
-    color: "#000097",
+    color: "white",
     fontSize: 16,
   },
 
