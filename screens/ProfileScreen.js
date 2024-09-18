@@ -1,16 +1,17 @@
 import React from "react";
 import {
   StyleSheet,
-  Text,
   View,
   ImageBackground,
   ScrollView,
   TouchableOpacity,
+  Image,
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { MaterialIcons } from "@expo/vector-icons";
 
 const backgroundImage = require("@/images/background.jpg");
+const introImage = require("@/images/intro.png");
 
 const ProfileScreen = () => {
   const navigation = useNavigation();
@@ -25,11 +26,10 @@ const ProfileScreen = () => {
         <TouchableOpacity onPress={handleBackPress}>
           <MaterialIcons name="arrow-back" size={24} color="white" />
         </TouchableOpacity>
-        <Text style={styles.headerText}>Profile Screen</Text>
       </View>
 
       <ScrollView contentContainerStyle={styles.scrollContainer}>
-        <Text style={styles.contentText}>Welcome to the profile page!</Text>
+        <Image source={introImage} style={styles.introImage} />
       </ScrollView>
     </ImageBackground>
   );
@@ -49,22 +49,15 @@ const styles = StyleSheet.create({
     paddingTop: 60,
   },
 
-  headerText: {
-    color: "white", // Ensure text is visible on the background
-    fontSize: 24,
-    fontWeight: "bold",
-  },
-
   scrollContainer: {
     flexGrow: 1,
     justifyContent: "center",
     alignItems: "center",
   },
 
-  contentText: {
-    color: "white",
-    fontSize: 18,
-    marginTop: 20,
+  introImage: {
+    width: 440,
+    height: 800,
   },
 });
 

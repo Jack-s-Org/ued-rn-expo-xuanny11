@@ -16,6 +16,7 @@ import Feather from "@expo/vector-icons/Feather";
 import FontAwesome5 from "@expo/vector-icons/FontAwesome5";
 import KpopScreen from "./KpopScreen";
 import ChoreographyScreen from "./ChoreographyScreen";
+import ProfileScreen from "./ProfileScreen";
 const MainStacks = createNativeStackNavigator();
 
 const Tab = createBottomTabNavigator();
@@ -154,6 +155,12 @@ const MainScreens = () => {
       <MainStacks.Screen
         name="ChoreographyScreen"
         component={ChoreographyScreen}
+        options={{ animation: "fade_from_bottom" }}
+      />
+
+      <MainStacks.Screen
+        name="ProfileScreen"
+        component={ProfileScreen}
         options={{ animation: "fade_from_bottom" }}
       />
     </MainStacks.Navigator>

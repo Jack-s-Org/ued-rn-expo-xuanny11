@@ -11,6 +11,7 @@ import {
 import { useNavigation } from "@react-navigation/native";
 import { MaterialIcons } from "@expo/vector-icons";
 import { FontAwesome } from "@expo/vector-icons";
+import SwipeDetector from "@/components/carousel_swipe_workshop/SwipeDetector";
 
 const backgroundImage = require("@/images/background.jpg");
 const backButtonImage = require("@/images/backbutton.png");
@@ -22,9 +23,15 @@ const programBoxImage = require("@/images/programbox.png");
 const blackmambaImage = require("@/images/blackmamba.png");
 const dreamscometrueImage = require("@/images/dreamscometrue.png");
 const armageddonImage = require("@/images/armageddon.png");
+const moreaboutImage = require("@/images/moreaboutaespa.png");
 
 const ChoreographyScreen = () => {
   const navigation = useNavigation();
+  const handleSwipe = (directionY) => {
+    if (directionY === "up" || directionY === "down") {
+      navigation.navigate("ProfileScreen");
+    }
+  };
 
   const handleBackPress = () => {
     navigation.goBack();
@@ -241,6 +248,13 @@ const ChoreographyScreen = () => {
           </View>
         </View>
       </ScrollView>
+
+      <SwipeDetector onSwipe={handleSwipe}>
+        <View style={styles.moreAboutContainer}>
+          <Text style={styles.moreAboutText}>More About Aespa</Text>
+          <Image source={moreaboutImage} style={styles.moreAboutImage} />
+        </View>
+      </SwipeDetector>
     </ImageBackground>
   );
 };
@@ -404,18 +418,38 @@ const styles = StyleSheet.create({
 
   horizontalScrollContainer: {
     alignSelf: "center",
-    height: 400,
-    top: -130,
+    height: 500,
+    top: -70,
     left: 50,
     gap: 120,
     alignItems: "flex-start",
     paddingRight: 110,
+    marginBottom: -150,
   },
 
   belowSearchBarImage: {
     width: 400,
     height: 540,
     paddingTop: 50,
+    resizeMode: "contain",
+  },
+
+  moreAboutContainer: {
+    alignItems: "center",
+    marginTop: 25,
+    paddingHorizontal: 20,
+  },
+
+  moreAboutText: {
+    color: "white",
+    fontSize: 12,
+    fontWeight: "bold",
+    marginBottom: 5,
+  },
+
+  moreAboutImage: {
+    width: 410,
+    height: 130,
     resizeMode: "contain",
   },
 });
