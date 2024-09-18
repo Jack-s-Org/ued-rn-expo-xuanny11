@@ -17,6 +17,7 @@ import FontAwesome5 from "@expo/vector-icons/FontAwesome5";
 import KpopScreen from "./KpopScreen";
 import ChoreographyScreen from "./ChoreographyScreen";
 import ProfileScreen from "./ProfileScreen";
+import JoinClassScreen from "./JoinClassScreen";
 const MainStacks = createNativeStackNavigator();
 
 const Tab = createBottomTabNavigator();
@@ -161,6 +162,12 @@ const MainScreens = () => {
       <MainStacks.Screen
         name="ProfileScreen"
         component={ProfileScreen}
+        options={{ animation: "fade_from_bottom" }}
+      />
+
+      <MainStacks.Screen
+        name="JoinClassScreen"
+        component={JoinClassScreen}
         options={{ animation: "fade_from_bottom" }}
       />
     </MainStacks.Navigator>

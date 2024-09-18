@@ -12,6 +12,7 @@ import { useNavigation } from "@react-navigation/native";
 import { MaterialIcons } from "@expo/vector-icons";
 import { FontAwesome } from "@expo/vector-icons";
 import SwipeDetector from "@/components/carousel_swipe_workshop/SwipeDetector";
+import JoinClassScreen from "./JoinClassScreen";
 
 const backgroundImage = require("@/images/background.jpg");
 const backButtonImage = require("@/images/backbutton.png");
@@ -104,7 +105,9 @@ const ChoreographyScreen = () => {
                 </ImageBackground>
               </TouchableOpacity>
 
-              <TouchableOpacity>
+              <TouchableOpacity
+                onPress={() => navigation.navigate("JoinClassScreen")}
+              >
                 <ImageBackground
                   source={programBoxImage}
                   style={styles.buttonImage}
@@ -147,7 +150,9 @@ const ChoreographyScreen = () => {
                 </ImageBackground>
               </TouchableOpacity>
 
-              <TouchableOpacity>
+              <TouchableOpacity
+                onPress={() => navigation.navigate("JoinClassScreen")}
+              >
                 <ImageBackground
                   source={programBoxImage}
                   style={styles.buttonImage}
@@ -193,7 +198,9 @@ const ChoreographyScreen = () => {
                 </ImageBackground>
               </TouchableOpacity>
 
-              <TouchableOpacity>
+              <TouchableOpacity
+                onPress={() => navigation.navigate("JoinClassScreen")}
+              >
                 <ImageBackground
                   source={programBoxImage}
                   style={styles.buttonImage}
@@ -236,7 +243,9 @@ const ChoreographyScreen = () => {
                 </ImageBackground>
               </TouchableOpacity>
 
-              <TouchableOpacity>
+              <TouchableOpacity
+                onPress={() => navigation.navigate("JoinClassScreen")}
+              >
                 <ImageBackground
                   source={programBoxImage}
                   style={styles.buttonImage}

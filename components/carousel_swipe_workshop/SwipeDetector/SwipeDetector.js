@@ -5,7 +5,7 @@ import {
   GestureDetector,
   GestureHandlerRootView,
 } from "react-native-gesture-handler";
-import { StyleSheet } from "react-native";
+import { StyleSheet, View } from "react-native";
 import { useSharedValue } from "react-native-reanimated";
 
 export default function SwipeDetector({ children, onSwipe }) {
@@ -24,7 +24,9 @@ export default function SwipeDetector({ children, onSwipe }) {
 
   return (
     <GestureHandlerRootView>
-      <GestureDetector gesture={fling}>{children}</GestureDetector>
+      <GestureDetector gesture={fling}>
+        <View style={{ flex: 1 }}>{children}</View>
+      </GestureDetector>
     </GestureHandlerRootView>
   );
 }
