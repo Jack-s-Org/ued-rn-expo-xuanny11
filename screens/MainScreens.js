@@ -18,6 +18,8 @@ import KpopScreen from "./KpopScreen";
 import ChoreographyScreen from "./ChoreographyScreen";
 import ProfileScreen from "./ProfileScreen";
 import JoinClassScreen from "./JoinClassScreen";
+import SelectScreen from "./SelectScreen";
+
 const MainStacks = createNativeStackNavigator();
 
 const Tab = createBottomTabNavigator();
@@ -168,6 +170,12 @@ const MainScreens = () => {
       <MainStacks.Screen
         name="JoinClassScreen"
         component={JoinClassScreen}
+        options={{ animation: "fade_from_bottom" }}
+      />
+
+      <MainStacks.Screen
+        name="SelectScreen"
+        component={SelectScreen}
         options={{ animation: "fade_from_bottom" }}
       />
     </MainStacks.Navigator>

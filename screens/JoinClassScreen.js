@@ -11,12 +11,19 @@ import { useNavigation } from "@react-navigation/native";
 
 const backgroundImage = require("@/images/background.jpg");
 const joinClassImage = require("@/images/joinclass.png");
+const classcodeImage = require("@/images/classcode.png");
+const codeImage = require("@/images/code.png");
+const doneImage = require("@/images/done.png");
 
 const JoinClassScreen = () => {
   const navigation = useNavigation();
 
   const handleBackPress = () => {
     navigation.goBack();
+  };
+
+  const handleDonePress = () => {
+    navigation.navigate("SelectScreen");
   };
 
   return (
@@ -26,12 +33,34 @@ const JoinClassScreen = () => {
           <Image source={joinClassImage} style={styles.joinClassImage} />
           <View style={styles.overlayContainer}>
             <Text style={styles.joinClassText}>Join Class</Text>
+
+            <View style={styles.imageColumn}>
+              <View style={styles.classImageWrapper}>
+                <Image source={classcodeImage} style={styles.classImage} />
+                <View style={styles.overlayTextContainer}>
+                  <Text style={styles.classcodeText}>Class Code</Text>
+                </View>
+              </View>
+
+              <View style={styles.codeImageWrapper}>
+                <Image source={codeImage} style={styles.classImage} />
+                <View style={styles.overlayTextContainer}>
+                  <Text style={styles.codeText}>Enter the code here</Text>
+                </View>
+              </View>
+
+              <View style={styles.doneImageWrapper}>
+                <Image source={doneImage} style={styles.doneImage} />
+                <TouchableOpacity
+                  onPress={handleDonePress}
+                  style={styles.doneButton}
+                >
+                  <Text style={styles.doneButtonText}>Done</Text>
+                </TouchableOpacity>
+              </View>
+            </View>
           </View>
         </View>
-
-        <TouchableOpacity onPress={handleBackPress} style={styles.backButton}>
-          <Text style={styles.backButtonText}>Go Back</Text>
-        </TouchableOpacity>
       </View>
     </ImageBackground>
   );
@@ -75,13 +104,69 @@ const styles = StyleSheet.create({
     bottom: 120,
   },
 
-  backButton: {
-    backgroundColor: "#6200EE",
+  imageColumn: {
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop: -145,
+  },
+
+  classImageWrapper: {
+    position: "relative",
+    marginBottom: -80,
+  },
+
+  codeImageWrapper: {
+    position: "relative",
+    marginBottom: -80,
+  },
+
+  classImage: {
+    width: 370,
+    height: 150,
+    resizeMode: "contain",
+  },
+
+  overlayTextContainer: {
+    position: "absolute",
+    top: 62,
+    left: 30,
+    flexDirection: "row",
+    alignItems: "center",
+  },
+
+  classcodeText: {
+    color: "#000097",
+    fontSize: 16,
+    fontWeight: "medium",
+  },
+
+  codeText: {
+    color: "#000097",
+    fontSize: 12,
+    fontWeight: "medium",
+  },
+
+  doneImageWrapper: {
+    position: "relative",
+  },
+
+  doneImage: {
+    width: 380,
+    height: 150,
+    resizeMode: "contain",
+  },
+
+  doneButton: {
+    position: "absolute",
+    bottom: 57,
+    left: 160,
     padding: 10,
+    // backgroundColor: "#6200EE",
     borderRadius: 5,
   },
 
-  backButtonText: {
+  doneButtonText: {
     color: "#fff",
     fontSize: 16,
   },
