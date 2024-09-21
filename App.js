@@ -12,6 +12,8 @@ import DiscoverScreen from "./screens/DiscoverScreen";
 import KPopScreen from "./screens/KpopScreen";
 import ChoreographyScreen from "./screens/ChoreographyScreen";
 import JoinClassScreen from "./screens/JoinClassScreen";
+import PositionScreen from "./screens/PositionScreen";
+import MovementScreen from "./screens/MovementScreen";
 
 const Icon = createIconSetFromIcoMoon(
   require("./assets/icomoon/selection.json"),

@@ -18,6 +18,7 @@ const recommendationBoxBackgroundImage = require("@/images/recommendationbox.png
 const exploreBoxBackgroundImage = require("@/images/explorebox.png");
 const songBoxBackgroundImage = require("@/images/songbox.png");
 const danceworkoutBoxBackgroundImage = require("@/images/danceworkoutbox.png");
+const dailyusageImage = require("@/images/dailyusage.png");
 
 const HomeScreen = () => {
   return (
@@ -32,6 +33,8 @@ const HomeScreen = () => {
       </View>
 
       <ScrollView contentContainerStyle={styles.scrollContainer}>
+        <Image source={dailyusageImage} style={styles.dailyusageImage} />
+
         <ImageBackground source={box1BackgroundImage} style={styles.box1}>
           <View style={styles.innerBoxesContainer}>
             <ImageBackground
@@ -404,6 +407,12 @@ const styles = StyleSheet.create({
     height: 100,
     marginRight: 10,
     borderRadius: 15,
+  },
+
+  dailyusageImage: {
+    width: "100%",
+    height: 190,
+    resizeMode: "cover",
   },
 });
 

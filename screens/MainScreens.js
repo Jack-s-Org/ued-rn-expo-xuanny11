@@ -20,6 +20,7 @@ import ProfileScreen from "./ProfileScreen";
 import JoinClassScreen from "./JoinClassScreen";
 import SelectScreen from "./SelectScreen";
 import PositionScreen from "./PositionScreen";
+import MovementScreen from "./MovementScreen";
 
 const MainStacks = createNativeStackNavigator();
 
@@ -183,6 +184,12 @@ const MainScreens = () => {
       <MainStacks.Screen
         name="PositionScreen"
         component={PositionScreen}
+        options={{ animation: "fade_from_bottom" }}
+      />
+
+      <MainStacks.Screen
+        name="MovementScreen"
+        component={MovementScreen}
         options={{ animation: "fade_from_bottom" }}
       />
     </MainStacks.Navigator>
