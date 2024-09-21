@@ -3,7 +3,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import HomeScreen from "./HomeScreen";
-import NotificationsScreen from "./NotificationsScreen";
+import CommunityScreen from "./CommunityScreen";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import MeScreen from "./MeScreen";
 import DiscoverScreen from "./DiscoverScreen";
@@ -21,6 +21,7 @@ import JoinClassScreen from "./JoinClassScreen";
 import SelectScreen from "./SelectScreen";
 import PositionScreen from "./PositionScreen";
 import MovementScreen from "./MovementScreen";
+import VideoScreen from "./VideoScreen";
 
 const MainStacks = createNativeStackNavigator();
 
@@ -92,7 +93,7 @@ const MainTabs = ({ navigation }) => {
 
       <Tab.Screen
         name="video"
-        component={NotificationsScreen}
+        component={CommunityScreen}
         options={{
           tabBarIcon: ({ color, size }) => (
             <View
@@ -190,6 +191,18 @@ const MainScreens = () => {
       <MainStacks.Screen
         name="MovementScreen"
         component={MovementScreen}
+        options={{ animation: "fade_from_bottom" }}
+      />
+
+      <MainStacks.Screen
+        name="VideoScreen"
+        component={VideoScreen}
+        options={{ animation: "fade_from_bottom" }}
+      />
+
+      <MainStacks.Screen
+        name="CommunityScreen"
+        component={CommunityScreen}
         options={{ animation: "fade_from_bottom" }}
       />
     </MainStacks.Navigator>

@@ -178,14 +178,14 @@ const SelectScreen = () => {
           <View style={styles.textOverlay}>
             <Text style={styles.nameText}>Giselle</Text>
             <Text style={styles.roleText}>Role Description</Text>
-            <Text style={styles.descriptionText}>Main Dancer</Text>
+            <Text style={styles.descriptionText}>Main Rapper</Text>
             <Text style={styles.difficultyText}>Difficulty</Text>
             <View style={styles.starContainer}>
               <FontAwesome name="star" size={18} color="#D1ADFF" />
               <FontAwesome name="star" size={18} color="#D1ADFF" />
               <FontAwesome name="star-o" size={18} color="#D1ADFF" />
               <FontAwesome name="star-o" size={18} color="#D1ADFF" />
-              <FontAwesome name="star-half-full" size={18} color="#D1ADFF" />
+              <FontAwesome name="star-o" size={18} color="#D1ADFF" />
             </View>
             <Image source={gisellepositionImage} style={styles.positionImage} />
           </View>

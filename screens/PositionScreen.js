@@ -11,6 +11,7 @@ import {
 import { useNavigation } from "@react-navigation/native";
 import { MaterialIcons } from "@expo/vector-icons";
 import { Video } from "expo-av";
+import MovementScreen from "./MovementScreen";
 
 const backgroundImage = require("@/images/background.jpg");
 const backButtonImage = require("@/images/backbutton.png");
@@ -55,7 +56,13 @@ const PositionScreen = () => {
   };
 
   const handleIconPress = (iconType) => {
-    console.log(`${iconType} pressed`);
+    if (iconType === "3D Dance") {
+      navigation.navigate("MovementScreen");
+    } else if (iconType === "Video") {
+      navigation.navigate("VideoScreen");
+    } else {
+      console.log(`${iconType} pressed`);
+    }
   };
 
   return (
