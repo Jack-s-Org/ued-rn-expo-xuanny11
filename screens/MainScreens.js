@@ -19,6 +19,7 @@ import ChoreographyScreen from "./ChoreographyScreen";
 import ProfileScreen from "./ProfileScreen";
 import JoinClassScreen from "./JoinClassScreen";
 import SelectScreen from "./SelectScreen";
+import PositionScreen from "./PositionScreen";
 
 const MainStacks = createNativeStackNavigator();
 
@@ -176,6 +177,12 @@ const MainScreens = () => {
       <MainStacks.Screen
         name="SelectScreen"
         component={SelectScreen}
+        options={{ animation: "fade_from_bottom" }}
+      />
+
+      <MainStacks.Screen
+        name="PositionScreen"
+        component={PositionScreen}
         options={{ animation: "fade_from_bottom" }}
       />
     </MainStacks.Navigator>
