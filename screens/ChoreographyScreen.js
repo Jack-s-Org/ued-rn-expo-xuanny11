@@ -323,6 +323,7 @@ const styles = StyleSheet.create({
     top: -15,
     color: "white",
     fontSize: 16,
+    fontFamily: "MontserratMedium",
   },
 
   scrollViewContainer: {
@@ -352,6 +353,7 @@ const styles = StyleSheet.create({
     color: "#000097",
     fontSize: 18,
     fontWeight: "bold",
+    fontFamily: "MontserratBold",
   },
 
   titleText2: {
@@ -361,6 +363,7 @@ const styles = StyleSheet.create({
     color: "white",
     fontSize: 18,
     fontWeight: "bold",
+    fontFamily: "MontserratBold",
   },
 
   iconContainer: {
@@ -390,6 +393,7 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontWeight: "bold",
     marginBottom: 5,
+    fontFamily: "MontserratBold",
   },
 
   starContainer: {
@@ -401,6 +405,7 @@ const styles = StyleSheet.create({
     color: "white",
     fontSize: 14,
     marginTop: 5,
+    fontFamily: "MontserratRegular",
   },
 
   buttonContainer: {
@@ -423,6 +428,7 @@ const styles = StyleSheet.create({
     color: "white",
     fontSize: 12,
     fontWeight: "bold",
+    fontFamily: "MontserratBold",
   },
 
   horizontalScrollContainer: {
@@ -454,6 +460,7 @@ const styles = StyleSheet.create({
     fontSize: 12,
     fontWeight: "bold",
     marginBottom: 5,
+    fontFamily: "MontserratBold",
   },
 
   moreAboutImage: {

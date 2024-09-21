@@ -27,6 +27,9 @@ export default function App() {
   const [fontsLoaded] = useFonts({
     IcoMoon: require("./assets/icomoon/icomoon.ttf"),
     "Anton-Regular": require("@/assets/fonts/Anton-Regular.ttf"),
+    MontserratBold: require("@/assets/fonts/Montserrat-Bold.ttf"),
+    MontserratMedium: require("@/assets/fonts/Montserrat-Medium.ttf"),
+    MontserratRegular: require("@/assets/fonts/Montserrat-Regular.ttf"),
   });
 
   if (!fontsLoaded) {

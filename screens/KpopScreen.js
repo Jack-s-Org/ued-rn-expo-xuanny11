@@ -183,6 +183,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     color: "#000097",
     textAlign: "center",
+    fontFamily: "MontserratBold",
   },
 
   imageTextContainer: {
@@ -219,6 +220,7 @@ const styles = StyleSheet.create({
     color: "#fff",
     position: "absolute",
     textAlign: "center",
+    fontFamily: "MontserratBold",
   },
 
   iconText2: {
@@ -226,6 +228,7 @@ const styles = StyleSheet.create({
     color: "#fff",
     position: "absolute",
     textAlign: "center",
+    fontFamily: "MontserratBold",
   },
 
   closeIcon: {
@@ -270,6 +273,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     alignSelf: "flex-start",
     marginLeft: 20,
+    fontFamily: "MontserratBold",
   },
 });
 

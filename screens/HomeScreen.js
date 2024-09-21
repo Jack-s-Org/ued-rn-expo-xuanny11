@@ -212,6 +212,7 @@ const styles = StyleSheet.create({
   },
 
   logoText: {
+    fontFamily: "MontserratBold",
     fontSize: 24,
     fontWeight: "bold",
     color: "#000097",
@@ -258,7 +259,7 @@ const styles = StyleSheet.create({
 
   eventTitle: {
     color: "#000097",
-    fontFamily: "Montserrat",
+    fontFamily: "MontserratBold",
     fontSize: 12,
     fontWeight: "700",
     lineHeight: 14,
@@ -267,7 +268,7 @@ const styles = StyleSheet.create({
 
   eventDate: {
     color: "#000097",
-    fontFamily: "Montserrat",
+    fontFamily: "MontserratBold",
     fontSize: 6,
     fontWeight: "400",
     lineHeight: 8,
@@ -307,6 +308,7 @@ const styles = StyleSheet.create({
   },
 
   imageText1: {
+    fontFamily: "MontserratBold",
     color: "#ffffff",
     fontSize: 12,
     fontWeight: "bold",
@@ -316,6 +318,7 @@ const styles = StyleSheet.create({
     color: "#ffffff",
     fontSize: 4,
     fontWeight: "medium",
+    fontFamily: "MontserratBold",
   },
 
   recommendationBox: {
@@ -337,6 +340,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     color: "#000097",
     marginBottom: 0,
+    fontFamily: "MontserratBold",
   },
 
   songBox: {
@@ -355,6 +359,7 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontWeight: "500",
     color: "#000097",
+    fontFamily: "MontserratMedium",
   },
 
   exploreBox: {
@@ -375,6 +380,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     color: "#ffffff",
     marginBottom: 0,
+    fontFamily: "MontserratBold",
   },
 
   image3: {

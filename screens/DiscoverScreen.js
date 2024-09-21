@@ -168,6 +168,7 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: "bold",
     color: "#000097",
+    fontFamily: "MontserratBold",
   },
 
   iconContainer: {
@@ -210,6 +211,7 @@ const styles = StyleSheet.create({
     backgroundColor: "transparent",
     padding: 5,
     borderRadius: 5,
+    fontFamily: "MontserratBold",
   },
 
   categoriesCardContainer: {
@@ -240,6 +242,7 @@ const styles = StyleSheet.create({
     marginTop: 16,
     marginLeft: 20,
     alignItems: "flex-start",
+    fontFamily: "MontserratBold",
   },
 
   innerCardImage: {

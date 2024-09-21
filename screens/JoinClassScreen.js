@@ -102,6 +102,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     color: "#fff",
     bottom: 120,
+    fontFamily: "MontserratBold",
   },
 
   imageColumn: {
@@ -139,12 +140,14 @@ const styles = StyleSheet.create({
     color: "#000097",
     fontSize: 16,
     fontWeight: "medium",
+    fontFamily: "MontserratBold",
   },
 
   codeText: {
     color: "#000097",
     fontSize: 12,
     fontWeight: "medium",
+    fontFamily: "MontserratMedium",
   },
 
   doneImageWrapper: {
@@ -169,6 +172,7 @@ const styles = StyleSheet.create({
   doneButtonText: {
     color: "#fff",
     fontSize: 16,
+    fontFamily: "MontserratMedium",
   },
 });
 

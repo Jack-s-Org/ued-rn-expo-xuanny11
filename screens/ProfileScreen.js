@@ -190,6 +190,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     color: "#fff",
     marginRight: 10,
+    fontFamily: "MontserratBold",
   },
 
   programBoxContainer: {
@@ -210,6 +211,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: "bold",
     color: "#fff",
+    fontFamily: "MontserratBold",
   },
 
   introductionboxContainer: {
@@ -231,6 +233,7 @@ const styles = StyleSheet.create({
     color: "#fff",
     bottom: 835,
     left: 45,
+    fontFamily: "MontserratBold",
   },
 
   descriptionText: {
@@ -238,17 +241,18 @@ const styles = StyleSheet.create({
     marginTop: 12,
     fontSize: 14,
     color: "#fff",
-    bottom: 830,
+    bottom: 840,
     left: 35,
     alignContent: "center",
     lineHeight: 20,
     textAlign: "left",
     paddingHorizontal: 10,
+    fontFamily: "MontserratMedium",
   },
 
   horizontalScroll: {
     marginTop: 30,
-    bottom: 820,
+    bottom: 840,
     left: 30,
   },
 
@@ -270,7 +274,7 @@ const styles = StyleSheet.create({
     borderRadius: 25,
     marginBottom: 10,
     marginLeft: -10,
-    bottom: 820,
+    bottom: 840,
     left: 25,
   },
 
@@ -279,6 +283,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     color: "#000097",
     marginBottom: 0,
+    fontFamily: "MontserratBold",
   },
 
   songBox: {
@@ -298,6 +303,7 @@ const styles = StyleSheet.create({
     fontWeight: "500",
     color: "#000097",
     left: -15,
+    fontFamily: "MontserratMedium",
   },
 });
 

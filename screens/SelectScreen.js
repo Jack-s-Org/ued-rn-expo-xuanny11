@@ -257,11 +257,13 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     color: "#fff",
     marginBottom: 10,
+    fontFamily: "MontserratBold",
   },
 
   subtitleText: {
-    fontSize: 16,
+    fontSize: 14,
     color: "#fff",
+    fontFamily: "MontserratMedium",
   },
 
   scrollContainer: {
@@ -298,6 +300,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     textAlign: "center",
     flex: 1,
+    fontFamily: "MontserratBold",
   },
 
   roleText: {
@@ -306,11 +309,14 @@ const styles = StyleSheet.create({
     fontSize: 16,
     textAlign: "center",
     flex: 1,
+    fontFamily: "MontserratBold",
   },
 
   descriptionText: {
     color: "purple",
     fontWeight: "regular",
+    fontFamily: "MontserratRegular",
+
     fontSize: 14,
     textAlign: "center",
     flex: 1,
@@ -319,6 +325,8 @@ const styles = StyleSheet.create({
   difficultyText: {
     color: "#10071F",
     fontWeight: "bold",
+    fontFamily: "MontserratBold",
+
     fontSize: 16,
     textAlign: "center",
     flex: 1,
@@ -367,6 +375,7 @@ const styles = StyleSheet.create({
     fontSize: 12,
     color: "#fff",
     fontWeight: "bold",
+    fontFamily: "MontserratBold",
   },
 });
 

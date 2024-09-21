@@ -22,6 +22,7 @@ import SelectScreen from "./SelectScreen";
 import PositionScreen from "./PositionScreen";
 import MovementScreen from "./MovementScreen";
 import VideoScreen from "./VideoScreen";
+import TrendingScreen from "./TrendingScreen";
 
 const MainStacks = createNativeStackNavigator();
 
@@ -60,7 +61,7 @@ const MainTabs = ({ navigation }) => {
           tabBarIcon: ({ color, size }) => (
             <View
               style={{
-                marginTop: 40,
+                marginTop: 45,
                 width: 40,
                 height: 40,
                 marginLeft: 20,
@@ -79,7 +80,7 @@ const MainTabs = ({ navigation }) => {
           tabBarIcon: ({ color, size }) => (
             <View
               style={{
-                marginTop: 40,
+                marginTop: 45,
                 width: 40,
                 height: 40,
                 marginLeft: 20,
@@ -98,7 +99,7 @@ const MainTabs = ({ navigation }) => {
           tabBarIcon: ({ color, size }) => (
             <View
               style={{
-                marginTop: 40,
+                marginTop: 45,
                 width: 40,
                 height: 40,
                 marginLeft: 20,
@@ -117,10 +118,10 @@ const MainTabs = ({ navigation }) => {
           tabBarIcon: ({ color, size }) => (
             <View
               style={{
-                marginTop: 40,
+                marginTop: 45,
                 width: 40,
                 height: 40,
-                marginRight: 20,
+                marginRight: 0,
               }}
             >
               <AntDesign name="user" size={24} color={color} />
@@ -203,6 +204,17 @@ const MainScreens = () => {
       <MainStacks.Screen
         name="CommunityScreen"
         component={CommunityScreen}
+        options={{ animation: "fade_from_bottom" }}
+      />
+
+      <MainStacks.Screen
+        name="TrendingScreen"
+        component={TrendingScreen}
+        options={{ animation: "fade_from_bottom" }}
+      />
+      <MainStacks.Screen
+        name="MeScreen"
+        component={MeScreen}
         options={{ animation: "fade_from_bottom" }}
       />
     </MainStacks.Navigator>

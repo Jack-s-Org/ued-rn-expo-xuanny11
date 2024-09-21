@@ -185,6 +185,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     color: "#fff",
     marginBottom: 10,
+    fontFamily: "MontserratBold",
   },
 
   rectangleBox: {
@@ -203,6 +204,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: "regular",
     color: "#fff",
+    fontFamily: "MontserratRegular",
   },
 
   videoContainer: {
@@ -269,6 +271,8 @@ const styles = StyleSheet.create({
   headerText: {
     fontSize: 14,
     fontWeight: "bold",
+    fontFamily: "MontserratBold",
+
     color: "#fff",
     width: "55%",
     left: 10,
@@ -281,6 +285,7 @@ const styles = StyleSheet.create({
     width: "40%",
     left: 5,
     textAlign: "left",
+    fontFamily: "MontserratMedium",
   },
 
   danceText: {
@@ -290,6 +295,7 @@ const styles = StyleSheet.create({
     textAlign: "left",
     lineHeight: 15,
     left: 5,
+    fontFamily: "MontserratRegular",
   },
 
   buttonContainer: {
